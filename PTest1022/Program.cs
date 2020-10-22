@@ -21,8 +21,8 @@ namespace PTest1022 {
             //６以上…「６以上です」
 
             /*** ●●● ここへ解答を入力 ●●● ***/
-            
 
+            outStr = (inputNum >=6) ? "６以上です" : "５以下です";
 
 
 
@@ -40,7 +40,7 @@ namespace PTest1022 {
 
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            data = (Exam_2_Stab()==null) ? -9999 : (int)Exam_2_Stab();
 
 
 
@@ -70,7 +70,7 @@ namespace PTest1022 {
             //bookオブジェクトがnullの場合はそのままnullを返却すること
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            title = (book.Title == null) ? null : book.Title;
 
 
 
@@ -87,10 +87,11 @@ namespace PTest1022 {
 
             //金額が1200円以上の書籍を抽出せよ
             //出力については「タイトル」と「金額」を出力すること
-            
+
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            books.Where(b=>b.Price>=1200).ToList().ForEach(b=>Console.WriteLine($"{b.Title}:{b.Price}  "));
+            books.Where(b => b.Price >= 1200).ToList().ForEach(b => pageSum = pageSum + b.Pages);
 
 
 
@@ -107,7 +108,7 @@ namespace PTest1022 {
             //出力については「タイトル」と「ページ数」を出力すること
 
             /*** ●●● ここへ解答を入力 ●●● ***/
-
+            books.Where(b => b.Title.Contains("物語") && b.Pages >= 400).ToList().ForEach(b=>Console.WriteLine($"{b.Title}:{b.Pages}  "));
 
 
 
@@ -124,8 +125,8 @@ namespace PTest1022 {
             // 出力例）79 65 53 45 35 34 20 12
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
-
+            numbers.OrderByDescending(n => n).ToList().ForEach(n=>Console.Write($"{n} "));
+            Console.WriteLine();
 
 
             /*** ●●●●● ここまで ●●●●● ***/
@@ -139,7 +140,7 @@ namespace PTest1022 {
             //引数で受け取った numbers の平均を変数 avg に求めよ
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            avg = numbers.Average(n => n);
 
 
 
@@ -159,7 +160,7 @@ namespace PTest1022 {
 
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            numbers.Select(n=> n * 3).ToList().ForEach(n=>Console.Write($"{n} "));
 
 
 
