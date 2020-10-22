@@ -125,7 +125,7 @@ namespace PTest1022 {
             // 出力例）79 65 53 45 35 34 20 12
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-            numbers.OrderByDescending(n => n).ToList().ForEach(n=>Console.Write($"{n} "));
+            numbers.OrderByDescending(n => n).Distinct().ToList().ForEach(n=>Console.Write($"{n} "));
             Console.WriteLine();
 
 
