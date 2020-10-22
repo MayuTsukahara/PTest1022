@@ -40,7 +40,7 @@ namespace PTest1022 {
 
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-            data = (Exam_2_Stab()==null) ? -9999 : (int)Exam_2_Stab();
+            data = Exam_2_Stab() ?? -9999 ;
 
 
 
@@ -52,8 +52,8 @@ namespace PTest1022 {
         //問題２テスト用スタブ
         private int? Exam_2_Stab() {
             //▼▼▼▼▼　以下のコメントを切り替えて確認をする 
-            //return null;
-            return 150;
+            return null;
+            //return 150;
             //▲▲▲▲▲
         }
 
